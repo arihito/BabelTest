@@ -4,10 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile": "babel src --out-dir dest"
+    "start": "node build/app",
+    "build": "babel src -d build",
+    "dev": "babel-node src/app"
+  },
+  "devDependencies": {
+    "babel-cli": "*",
+    "babel-preset-react": "*",
+    "babel-preset-eslatest-node6": "*"
   },
   "babel": {
-    "presets": ["es2015"]
+    "presets": ["react", "eslatest-node6"]
   },
   "repository": {
     "type": "git",
